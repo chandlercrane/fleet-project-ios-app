@@ -184,6 +184,11 @@ final class ContainerInteractor {
                     isSchoolZone = true
                 }
             }
+            for sign in signs{
+                if(sign.name == "Regulatory_End_Of_School_Zone_US"){
+                    isSchoolZone = false
+                }
+            }
             
             if (signs.count > 0){
                 /*-----------------------
@@ -303,12 +308,12 @@ final class ContainerInteractor {
     }
     
     private func presentSpeedLimit(oldState: SpeedLimitState?, newState: SpeedLimitState) {
+        print("present speed limit function")
         let sign = getIcon(for: Sign(type: .speedLimit, number: newState.speedLimits.speedLimitRange.max), over: newState.isSpeeding)
         let isNew = oldState == nil || oldState!.speedLimits != newState.speedLimits
         presenter.present(speedLimit: sign, isNew: isNew)
-        print("current speed: ", self.currentSpeed)
-        print("speed limit: ", newState.speedLimits.speedLimitRange.max)
-        
+        //print("current speed: ", self.currentSpeed)
+        //print("speed limit: ", newState.speedLimits.speedLimitRange.max)
     }
     
     private func playSpeedLimitAlert(oldState: SpeedLimitState?, newState: SpeedLimitState) {
