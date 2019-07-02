@@ -60,6 +60,11 @@
 		B580C368223BC4AB0095C4C2 /* MapboxVisionSafety.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B580C367223BC4AB0095C4C2 /* MapboxVisionSafety.framework */; };
 		B580C36A223BC52F0095C4C2 /* MapboxVisionSafetyNative.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B580C369223BC52F0095C4C2 /* MapboxVisionSafetyNative.framework */; };
 		B583DF872240FC3B00D73673 /* ZIPFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B583DF862240FC3B00D73673 /* ZIPFoundation.framework */; };
+		FE02AF0122C29ABC0007D170 /* DataFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE02AF0022C29ABC0007D170 /* DataFlow.swift */; };
+		FE989E7122CBE880003E5A85 /* LocationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE989E7022CBE880003E5A85 /* LocationDelegate.swift */; };
+		FEDBD3AD22C16A9500721DAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEDBD3AC22C16A9500721DAD /* Main.storyboard */; };
+		FEDBD3AF22C16EB800721DAD /* SpeedingAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDBD3AE22C16EB800721DAD /* SpeedingAlert.swift */; };
+		FEDBD3B122C1735900721DAD /* externalCameraSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDBD3B022C1735900721DAD /* externalCameraSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -143,6 +148,11 @@
 		B580C367223BC4AB0095C4C2 /* MapboxVisionSafety.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = MapboxVisionSafety.framework; path = Carthage/Build/iOS/MapboxVisionSafety.framework; sourceTree = "<group>"; };
 		B580C369223BC52F0095C4C2 /* MapboxVisionSafetyNative.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = MapboxVisionSafetyNative.framework; path = Carthage/Build/iOS/MapboxVisionSafetyNative.framework; sourceTree = "<group>"; };
 		B583DF862240FC3B00D73673 /* ZIPFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZIPFoundation.framework; path = Carthage/Build/iOS/ZIPFoundation.framework; sourceTree = "<group>"; };
+		FE02AF0022C29ABC0007D170 /* DataFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFlow.swift; sourceTree = "<group>"; };
+		FE989E7022CBE880003E5A85 /* LocationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDelegate.swift; sourceTree = "<group>"; };
+		FEDBD3AC22C16A9500721DAD /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		FEDBD3AE22C16EB800721DAD /* SpeedingAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedingAlert.swift; sourceTree = "<group>"; };
+		FEDBD3B022C1735900721DAD /* externalCameraSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = externalCameraSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -266,6 +276,9 @@
 				B532EE032170A9AA00B172FA /* ARMapNavigationController.swift */,
 				B532EE042170A9AB00B172FA /* UIButton+BackgroudColor.swift */,
 				2E4FEDF1215E5EA600DCB496 /* License */,
+				B52787D520F0B46A007D1EA7 /* AppDelegate.swift */,
+				B52787E720F0B625007D1EA7 /* ContainerViewController.swift */,
+				B52787EB20F0CE94007D1EA7 /* ContainerInteractor.swift */,
 				B5442003214A615D007CB69E /* PaddedLabel.swift */,
 				2E60335D214295F80050EDB3 /* Locale.swift */,
 				2E60335B214295CD0050EDB3 /* DistanceFormatter.swift */,
@@ -273,10 +286,7 @@
 				2E603355214294A00050EDB3 /* Tracker.swift */,
 				B56F4A3C213FE7F800DC4313 /* DistanceView.swift */,
 				B56F4A3B213FE7F700DC4313 /* RoadLanesView.swift */,
-				B52787E720F0B625007D1EA7 /* ContainerViewController.swift */,
-				B52787D520F0B46A007D1EA7 /* AppDelegate.swift */,
 				B52787E920F0B6A3007D1EA7 /* MenuViewController.swift */,
-				B52787EB20F0CE94007D1EA7 /* ContainerInteractor.swift */,
 				2E19772F211DF34C00311B95 /* MapViewController.swift */,
 				2E603366214299110050EDB3 /* OrderedDictionary.swift */,
 				2E9BF8FF21665318000A6A39 /* AlertPlayer.swift */,
@@ -284,6 +294,11 @@
 				B5314421218C7DA7001B6DEB /* SafetyState.swift */,
 				2E48C19421A5A9C50029B2A9 /* ImageSwitchingView.swift */,
 				2EA4E18622319091007690AC /* DelegateProxy.swift */,
+				FEDBD3AC22C16A9500721DAD /* Main.storyboard */,
+				FEDBD3AE22C16EB800721DAD /* SpeedingAlert.swift */,
+				FEDBD3B022C1735900721DAD /* externalCameraSource.swift */,
+				FE02AF0022C29ABC0007D170 /* DataFlow.swift */,
+				FE989E7022CBE880003E5A85 /* LocationDelegate.swift */,
 			);
 			path = demo;
 			sourceTree = "<group>";
@@ -404,6 +419,7 @@
 				B52A75862180B53700286AD8 /* collision_alert_warning.wav in Resources */,
 				2E4FEE0D215E947A00DCB496 /* LaunchScreen.storyboard in Resources */,
 				B544200021493C20007CB69E /* Signs.xcassets in Resources */,
+				FEDBD3AD22C16A9500721DAD /* Main.storyboard in Resources */,
 				2E4FEE0A215E807400DCB496 /* agreement.pdf in Resources */,
 				9D72A44113D27519A4189D85 /* overspeed_warning.wav in Resources */,
 			);
@@ -503,7 +519,9 @@
 				B52787EA20F0B6A3007D1EA7 /* MenuViewController.swift in Sources */,
 				2E60335A214295B30050EDB3 /* Signs.swift in Sources */,
 				B5045859217A077300BA5133 /* CollisionObjectView.swift in Sources */,
+				FEDBD3AF22C16EB800721DAD /* SpeedingAlert.swift in Sources */,
 				2E9BF90021665318000A6A39 /* AlertPlayer.swift in Sources */,
+				FE02AF0122C29ABC0007D170 /* DataFlow.swift in Sources */,
 				2E603356214294A00050EDB3 /* Tracker.swift in Sources */,
 				B532EE062170A9AB00B172FA /* ARMapNavigationController.swift in Sources */,
 				2E4FEDF4215E5EA600DCB496 /* WelcomeViewController.swift in Sources */,
@@ -514,9 +532,11 @@
 				B52787D620F0B46A007D1EA7 /* AppDelegate.swift in Sources */,
 				B532EE052170A9AB00B172FA /* ARContainerViewController.swift in Sources */,
 				2E4FEE08215E647400DCB496 /* Strings.swift in Sources */,
+				FEDBD3B122C1735900721DAD /* externalCameraSource.swift in Sources */,
 				B5314422218C7DA7001B6DEB /* SafetyState.swift in Sources */,
 				2E197730211DF34C00311B95 /* MapViewController.swift in Sources */,
 				2E60335C214295CD0050EDB3 /* DistanceFormatter.swift in Sources */,
+				FE989E7122CBE880003E5A85 /* LocationDelegate.swift in Sources */,
 				B544200221496793007CB69E /* DistanceView.swift in Sources */,
 				2E603367214299120050EDB3 /* OrderedDictionary.swift in Sources */,
 			);
@@ -621,7 +641,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GJZR2MEM28;
+				DEVELOPMENT_TEAM = 44R5CK65A7;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(BUILT_PRODUCTS_DIR)",
@@ -760,7 +780,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = GJZR2MEM28;
+				DEVELOPMENT_TEAM = 44R5CK65A7;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(BUILT_PRODUCTS_DIR)",
@@ -783,7 +803,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GJZR2MEM28;
+				DEVELOPMENT_TEAM = 44R5CK65A7;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(BUILT_PRODUCTS_DIR)",
@@ -807,7 +827,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GJZR2MEM28;
+				DEVELOPMENT_TEAM = 44R5CK65A7;
 				INFOPLIST_FILE = demoTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -830,7 +850,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GJZR2MEM28;
+				DEVELOPMENT_TEAM = 44R5CK65A7;
 				INFOPLIST_FILE = demoTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -852,7 +872,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GJZR2MEM28;
+				DEVELOPMENT_TEAM = 44R5CK65A7;
 				INFOPLIST_FILE = demoTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
