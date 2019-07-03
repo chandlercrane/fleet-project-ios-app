@@ -61,7 +61,6 @@
 		B580C36A223BC52F0095C4C2 /* MapboxVisionSafetyNative.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B580C369223BC52F0095C4C2 /* MapboxVisionSafetyNative.framework */; };
 		B583DF872240FC3B00D73673 /* ZIPFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B583DF862240FC3B00D73673 /* ZIPFoundation.framework */; };
 		FE02AF0122C29ABC0007D170 /* DataFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE02AF0022C29ABC0007D170 /* DataFlow.swift */; };
-		FE989E7122CBE880003E5A85 /* LocationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE989E7022CBE880003E5A85 /* LocationDelegate.swift */; };
 		FEDBD3AD22C16A9500721DAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEDBD3AC22C16A9500721DAD /* Main.storyboard */; };
 		FEDBD3AF22C16EB800721DAD /* SpeedingAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDBD3AE22C16EB800721DAD /* SpeedingAlert.swift */; };
 		FEDBD3B122C1735900721DAD /* externalCameraSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDBD3B022C1735900721DAD /* externalCameraSource.swift */; };
@@ -149,7 +148,6 @@
 		B580C369223BC52F0095C4C2 /* MapboxVisionSafetyNative.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = MapboxVisionSafetyNative.framework; path = Carthage/Build/iOS/MapboxVisionSafetyNative.framework; sourceTree = "<group>"; };
 		B583DF862240FC3B00D73673 /* ZIPFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZIPFoundation.framework; path = Carthage/Build/iOS/ZIPFoundation.framework; sourceTree = "<group>"; };
 		FE02AF0022C29ABC0007D170 /* DataFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFlow.swift; sourceTree = "<group>"; };
-		FE989E7022CBE880003E5A85 /* LocationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDelegate.swift; sourceTree = "<group>"; };
 		FEDBD3AC22C16A9500721DAD /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		FEDBD3AE22C16EB800721DAD /* SpeedingAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedingAlert.swift; sourceTree = "<group>"; };
 		FEDBD3B022C1735900721DAD /* externalCameraSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = externalCameraSource.swift; sourceTree = "<group>"; };
@@ -298,7 +296,6 @@
 				FEDBD3AE22C16EB800721DAD /* SpeedingAlert.swift */,
 				FEDBD3B022C1735900721DAD /* externalCameraSource.swift */,
 				FE02AF0022C29ABC0007D170 /* DataFlow.swift */,
-				FE989E7022CBE880003E5A85 /* LocationDelegate.swift */,
 			);
 			path = demo;
 			sourceTree = "<group>";
@@ -536,7 +533,6 @@
 				B5314422218C7DA7001B6DEB /* SafetyState.swift in Sources */,
 				2E197730211DF34C00311B95 /* MapViewController.swift in Sources */,
 				2E60335C214295CD0050EDB3 /* DistanceFormatter.swift in Sources */,
-				FE989E7122CBE880003E5A85 /* LocationDelegate.swift in Sources */,
 				B544200221496793007CB69E /* DistanceView.swift in Sources */,
 				2E603367214299120050EDB3 /* OrderedDictionary.swift in Sources */,
 			);
