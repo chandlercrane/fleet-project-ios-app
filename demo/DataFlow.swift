@@ -136,7 +136,7 @@ final class DataFlow {
         
     }
     
-    func sendDataSpeed(currentSpeed: Float, speedLimit: Float){
+    func sendDataSpeed(currentSpeed: Float, speedLimit: Float, longitude: Double, latitude: Double){
         print("======SEND DATA SPEED BEGIN=======")
         
         let date = Date()
@@ -144,9 +144,14 @@ final class DataFlow {
         formatter.formatOptions.insert(.withFractionalSeconds)  // this is only available effective iOS 11 and macOS 10.13
         let formattedDate = formatter.string(from: date)
         
-        print("speed limit (m/s): ", speedLimit)
-        print("speed limit (mph): ", speedLimit ?? 0 * Float(2.23694))
+        print("speed (m/s): ", currentSpeed)
+        let currentSpeed_imp = currentSpeed * 2.23694
+        print("speed (mph): ", currentSpeed_imp)
     
+        print("speed limit (m/s): ", speedLimit)
+        let speedLimit_imp : Int = Int((speedLimit * 2.23694).rounded())
+        print("speed limit (mph): ", speedLimit_imp)
+        
         if (oAuthToken.count < 2)
         {
             print ("oauth token ..",oAuthToken)
@@ -164,8 +169,14 @@ final class DataFlow {
             "class": "speedData",
             "object": "speed-data-1",
             "data": [
-                "speed" : currentSpeed,
-                "speedLimit" : speedLimit
+                "speed" : currentSpeed_imp,
+                "speedMetric" : currentSpeed,
+                "speedLimit" : speedLimit_imp,
+                "speedLimitMetric" : speedLimit,
+                "location" : [
+                    "longitude": longitude,
+                    "latitude": latitude
+                ],
             ]
             ]
             as [String : Any]

@@ -449,23 +449,22 @@ extension ContainerInteractor: VisionSafetyManagerDelegate {
         locManager.distanceFilter = kCLDistanceFilterNone
         locManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
         let currentLocation = locManager.location
-        let currentHeading = locManager.heading
         
         //let currentElevation =
         let speedLimit_metric : Float = speedLimits!.speedLimitRange.max
         //let speedLimit : Int = Int(speedLimit_metric * 2.237)
         print("speed limit (m/s): ", speedLimit_metric)
         print("location: ", currentLocation)
-        print("heading: ", currentHeading)
+        print("speed: ", currentLocation?.speed)
         
-        let myCurrentSpeed = self.currentSpeed
-        let currentSpeed : CLLocationSpeed = CLLocationSpeed()
         
-        print("speed test 1: ", myCurrentSpeed)
-        print("speed test 2: ", currentSpeed)
-        
+        let currentSpeed : Float = Float(currentLocation?.speed ?? 0)
+        let altitude = currentLocation?.altitude
+        let latitude = currentLocation?.coordinate.latitude ?? 0
+        let longitude = currentLocation?.coordinate.longitude ?? 0
+
         self.currentSpeedLimit = speedLimit_metric
-        self.dataFlow.sendDataSpeed(currentSpeed: Float(currentSpeed ?? 0), speedLimit: speedLimit_metric)
+        self.dataFlow.sendDataSpeed(currentSpeed: currentSpeed, speedLimit: speedLimit_metric, longitude: longitude, latitude: latitude)
         //update(speedLimit: speedLimits, position: currentLocation)
     }
     
