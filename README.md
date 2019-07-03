@@ -8,4 +8,4 @@ Opening [this project](https://portal.dataflow.iot.att.com/projects/tdp/road-vis
 This class currently saves location, sign name, and school zone data.
 
 #### Speed Data
-This class currently saves speed limit data.
+This class currently saves speed and speed limit data in m/s and mph as well as location data.
