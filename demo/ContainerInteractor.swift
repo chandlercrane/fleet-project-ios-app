@@ -171,11 +171,6 @@ final class ContainerInteractor {
                 CLLocationManager.authorizationStatus() ==  .authorizedAlways){
                 currentLocation = locManager.location
             }
-            var del = LocationDelegate()
-            var lm = CLLocationManager()
-            lm.delegate = del
-            lm.startUpdatingLocation()
-            
             let speedLimit : Int = Int(self.speedLimits?.speedLimitRange.max ?? 0 * 2.237)
             
             var isSchoolZone : Bool = false
@@ -194,9 +189,8 @@ final class ContainerInteractor {
                 /*-----------------------
                  -----DATA FLOW SEND------
                  -----------------------*/
-                
                 for sign in signs{
-                    self.dataFlow.sendDataLocAndSign(signName: sign.name, isSchoolZone: isSchoolZone, longitude: currentLocation.coordinate.longitude, latitude: currentLocation.coordinate.latitude)
+                    self.dataFlow.sendDataLocAndSign(signName: sign.name, isSchoolZone: isSchoolZone, longitude: currentLocation.coordinate.longitude, latitude: currentLocation.coordinate.latitude, speedMetric: currentLocation.speed)
 
                 }
             }

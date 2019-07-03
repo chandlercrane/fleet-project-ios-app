@@ -206,7 +206,7 @@ final class DataFlow {
         
 
     }
-    func sendDataLocAndSign(signName:String, isSchoolZone: Bool, longitude: Double, latitude: Double)
+    func sendDataLocAndSign(signName:String, isSchoolZone: Bool, longitude: Double, latitude: Double, speedMetric: Double)
     {
         
         print("======SEND DATA LOC AND SIGN BEGIN=======")
@@ -221,6 +221,10 @@ final class DataFlow {
         print ("longitude: ", longitude)
         print("type of latitude: ", type(of: latitude))
         print ("latitude: ", latitude)
+        
+        let speed = speedMetric * 2.23694
+        
+        
         
         if (oAuthToken.count < 2)
         {
@@ -245,6 +249,8 @@ final class DataFlow {
                     "longitude": longitude,
                     "latitude": latitude
                 ],
+                "speed": speed,
+                "speedMetric": speedMetric
             ]
         ]
         as [String : Any]
