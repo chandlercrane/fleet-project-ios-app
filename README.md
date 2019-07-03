@@ -5,7 +5,7 @@ Example application showing usage of [Mapbox Vision SDK](https://vision.mapbox.c
 ## Using the Road Vision App DataFlow Project
 Opening [this project](https://portal.dataflow.iot.att.com/projects/tdp/road-vision-app/environments/dev/registry) will show you where the data from the app goes
 #### Traffic Data
-This class currently saves location, sign name, and school zone data.
+This class currently saves peed and speed limit data in m/s and mph as well as location, sign name, and school zone data.
 
 #### Speed Data
 This class currently saves speed and speed limit data in m/s and mph as well as location data.
