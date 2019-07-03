@@ -451,17 +451,21 @@ extension ContainerInteractor: VisionSafetyManagerDelegate {
         let currentLocation = locManager.location
         
         //let currentElevation =
-        let speedLimit_metric : Float = speedLimits!.speedLimitRange.max
         //let speedLimit : Int = Int(speedLimit_metric * 2.237)
-        print("speed limit (m/s): ", speedLimit_metric)
-        print("location: ", currentLocation)
-        print("speed: ", currentLocation?.speed)
         
+        let speedLimit_metric : Float = speedLimits!.speedLimitRange.max
+
         
         let currentSpeed : Float = Float(currentLocation?.speed ?? 0)
         let altitude = currentLocation?.altitude
         let latitude = currentLocation?.coordinate.latitude ?? 0
         let longitude = currentLocation?.coordinate.longitude ?? 0
+
+        print("speed limit (m/s): ", speedLimit_metric)
+        print("location: ", currentLocation)
+        print("speed: ", currentSpeed)
+        print("latitude: ", latitude)
+        print("longitude: ", longitude)
 
         self.currentSpeedLimit = speedLimit_metric
         self.dataFlow.sendDataSpeed(currentSpeed: currentSpeed, speedLimit: speedLimit_metric, longitude: longitude, latitude: latitude)
